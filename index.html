@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  
+    <title>Train Scheduler</title>
+</head>
+<body>
+  <!-- Employee Tracker -->
+  <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="background-color: black; color: white">
+          <h1 class="text-center">Train Scheduler</h1>
+          <h3 class="text-center">QQQQ</h3>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-md-12">
+    
+            <!-- Current Employees-->
+            <div class="card mb-4">
+              <div class="card-header">Scheduled Trains</div>
+              <div class="card-body">
+                <table class="table table-sm table-hover" id='train-table'>
+                  <thead>
+                    <tr>
+                      <th scope="col">Train Name</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">First Train Time(military time)</th>
+                      <th scope="col">Frequency(minutes)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Add Employee  -->
+            <div class="card mb-4">
+              <div class="card-header">Add Train</div>
+              <div class="card-body">
+    
+                <!-- Entry Form -->
+                <form>
+                  <div class="form-group">
+                    <label for="train-input">Train Name</label>
+                    <input class="form-control" id="train-input" placeholder="310 to Yuma" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="role-input">Destination</label>
+                    <input class="form-control" id="destination-input" placeholder="Yuma" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="start-input">First Train Time(military time)</label>
+                    <input class="form-control" id="start-input" placeholder="1700" type="number">
+                  </div>
+                  <div class="form-group">
+                    <label for="rate-input">Frequency(minutes)</label>
+                    <input class="form-control" id="frequency-input" placeholder="60" type="text">
+                  </div>
+                  <button class="btn btn-primary float-right" id="add-train" type="submit">Submit</button>
+                </form>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
